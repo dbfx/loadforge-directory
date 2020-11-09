@@ -1,5 +1,5 @@
 Title: Testing webserver vs web app
-Description: Example for using nested TaskSets in your test configuration.
+Description: Generating load on the webserver as opposed to the web application
 
 ## Overview
 
