@@ -3,32 +3,26 @@ Description: Test that logs in and then requests a profile page.
 
 ## Overview
 
-A test which posts to a login page when it starts, then requests /hello and /world normally. It also 
-requests /item?id={item_id} with the item ID being between 1 and 10. You can also use random numbers in 
-locustfiles.
+A test which posts to a login page when it starts, then requests /profile and some static content normally.  
+This is a great example for logging into a site and then requesting content after login.
 
 ## Code
 
 ```python
-from locust import HttpLocust, TaskSet, task
+import time
+from locust import HttpUser, task, between
 
-class UserBehavior(TaskSet):
+class QuickstartUser(HttpUser):
     def on_start(self):        
-        self.login()    
-
-    def login(self):
-        self.client.post("/login", {"username":"foo", "password":"bar"})
+        self.client.post("/login", {'email': 'user@domain.com', 'password': 'passw0rd'})
     
     @task(2)
-    def index(self):
-        self.client.get("/")   
-    
+    def profiles(self):
+        self.client.get("/profile")     
+        
     @task(1)
-    def profile(self):
-        self.client.get("/profile")
-
-class WebsiteUser(HttpLocust):
-    task_set = UserBehavior
-    min_wait = 5000
-    max_wait = 9000
+    def statics(self):
+        self.client.get("/img/logo.png")
+        self.client.get("/css/styles.css")
+        self.client.get("/js/scripts.js")
 ```
