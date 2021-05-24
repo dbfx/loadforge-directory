@@ -6,6 +6,9 @@ Description: Test that logs in and then requests a profile page.
 A test which posts to a login page when it starts, then requests /profile and some static content normally.  
 This is a great example for logging into a site and then requesting content after login.
 
+The on_start definition will be run once by each individual simulated user. So they all login first, and then 
+execute your various tests. 
+
 ## Code
 
 ```python

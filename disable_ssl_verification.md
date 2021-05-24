@@ -8,7 +8,7 @@ in your test easily. Below are some examples of ways you can disable it, not an 
 need further help contact us for support. 
 
 ## Notes on SSL verification
-SSL verification is not really neccessary on a load test, and you shouldn't panic about disabling it if your certificate is invalid. 
+SSL verification is not really necessary on a load test, and you shouldn't panic about disabling it if your certificate is invalid. 
 We still have to simulate the full SSL negotiation, and the load test will still be completely valid. This is often useful 
 during test or development cycles.
 

@@ -1,4 +1,4 @@
-Title: API Load Test Example
+Title: Basic API Load Test Example
 Description: Load test a REST based HTTP API with Bearer token authentication 
 
 ## Overview
@@ -8,6 +8,8 @@ which you can see being set in the on_start startup definition, and then several
 data from our API. 
 
 Tip! Remember to disable API rate limits on your token, or you will get loads of failures :)
+
+We have a [more advanced API test example](https://loadforge.com/directory/laravel_api_test) available as well.
 
 ## Code
 

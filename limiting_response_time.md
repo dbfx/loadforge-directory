@@ -6,6 +6,11 @@ Description: Check for a specific word in the result, and that it doesn't take o
 Here we can see a snippet that checks for the word "Success" in a response, and then generates a 
 failure if its taken more than half a second to reply. 
 
+This is useful as it shows an example of monitoring the actual timings around a response. With LoadForge 
+you can parse the content that comes back, read headers, monitor timings and more. 
+
+This test will report failures in your LoadForge test when anything is slow. 
+
 ## Code
 
 ```python

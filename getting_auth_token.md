@@ -6,6 +6,8 @@ Description: Send a login request to get an authorization token for the rest of 
 Below is a partial test (just the on_start section) that shows how to set an authorization (or really any) header 
 based on response content at launch with your load test.
 
+Naturally, you would not do all of these. They are 3 examples of getting a Bearer token in different ways. 
+
 ## Code
 
 ```python

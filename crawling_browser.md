@@ -33,7 +33,7 @@ class AwesomeUser(HttpUser):
     
     @task(10)
     def index_page(self):
-        r = self.client.get("")
+        r = self.client.get("/")
         pq = PyQuery(r.content)
         link_elements = pq(".toctree-wrapper a.internal")
         self.toc_urls = [

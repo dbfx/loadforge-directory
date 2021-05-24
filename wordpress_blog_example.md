@@ -9,6 +9,9 @@ latest blog posts at random.
 
 We have a [full WordPress load testing guide available](https://loadforge.com/guides/wordpress-load-testing) as well. 
 
+The nicest feature about this test is that it will automatically crawl valid URLs and then request them 
+like a real user, at random. This can be applied to many types of tests.
+
 ## Code
 
 ```python
