@@ -10,7 +10,7 @@ anchor tags (a href) and randomly browses through them.
 
 ```python
 import random
-from locust import HttpLocust, TaskSet, task
+from locust import HttpUser, TaskSet, task
 from pyquery import PyQuery
 
 class AwesomeUser(HttpUser):    

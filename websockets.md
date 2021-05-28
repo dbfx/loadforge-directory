@@ -15,7 +15,7 @@ import gevent
 
 from uuid import uuid4
 
-from locust import HttpLocust, TaskSet, task, events, User
+from locust import HttpUser, TaskSet, task, events, User
 import websocket
 
 class SocketClient(object):

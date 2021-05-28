@@ -11,7 +11,7 @@ Naturally, you would not do all of these. They are 3 examples of getting a Beare
 ## Code
 
 ```python
-from locust import HttpLocust, TaskSet, task
+from locust import HttpUser, TaskSet, task
 import requests
 
 class UserBehavior(TaskSet):
